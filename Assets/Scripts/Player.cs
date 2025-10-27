@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
 
     private Animator animator;
 
+    public GameObject arrowPrefab;
 
     void Start()
     {
@@ -54,6 +55,11 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         transform.position += new Vector3(movement*moveSpeed, 0f, 0f) * Time.fixedDeltaTime;
+    }
+
+    public void FireArrow()
+    {
+        //Ins
     }
 
     private void PlayRunningAnimation()

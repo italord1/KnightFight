@@ -5,13 +5,15 @@ public class Arrow : MonoBehaviour
 
     public float arrowspeed = 5f;
 
-    void start()
+    void Start()
     {
         Destroy(this.gameObject,5f);
+        
     }
   
     void Update()
     {
         transform.Translate(transform.right *Time.deltaTime * arrowspeed);
+        
     }
 }
