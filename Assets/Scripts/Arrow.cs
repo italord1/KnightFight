@@ -11,9 +11,5 @@ public class Arrow : MonoBehaviour
         
     }
   
-    void Update()
-    {
-        transform.Translate(transform.right *Time.deltaTime * arrowspeed);
-        
-    }
+  
 }

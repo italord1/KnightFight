@@ -17,6 +17,8 @@ public class Player : MonoBehaviour
     private Animator animator;
 
     public GameObject arrowPrefab;
+    public Transform spawnPosition;
+    public float arrowSpeed = 7f;
 
     void Start()
     {
@@ -59,7 +61,9 @@ public class Player : MonoBehaviour
 
     public void FireArrow()
     {
-        //Ins
+       GameObject tempArrowPrefab =  Instantiate(arrowPrefab, spawnPosition.position, spawnPosition.rotation);
+        tempArrowPrefab.GetComponent<Rigidbody2D>().linearVelocity = spawnPosition.right * arrowSpeed;
+
     }
 
     private void PlayRunningAnimation()
