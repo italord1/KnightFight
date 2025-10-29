@@ -43,6 +43,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: BG3
+    uniqueID: 619783753
+    locked: 0
+  - name: BG2
+    uniqueID: 1901569793
+    locked: 0
+  - name: BG1
+    uniqueID: 1133863039
+    locked: 0
   - name: BackThing
     uniqueID: 2133217977
     locked: 0
