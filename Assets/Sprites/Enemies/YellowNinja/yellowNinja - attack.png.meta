@@ -1,67 +1,7 @@
 fileFormatVersion: 2
 guid: 178bfa3e07ff44540ae8dfb57ea04d62
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: -371128905726686782
-    second: yellowNinja - attack_0
-  - first:
-      213: -7361820261545525295
-    second: yellowNinja - attack_1
-  - first:
-      213: -8363650675703715988
-    second: yellowNinja - attack_2
-  - first:
-      213: -81355319158978230
-    second: yellowNinja - attack_3
-  - first:
-      213: 3305408546912355875
-    second: yellowNinja - attack_4
-  - first:
-      213: 6783577642651545438
-    second: yellowNinja - attack_5
-  - first:
-      213: -3355456968156199291
-    second: yellowNinja - attack_6
-  - first:
-      213: -8887661413788427986
-    second: yellowNinja - attack_7
-  - first:
-      213: -6226544559279949092
-    second: yellowNinja - attack_8
-  - first:
-      213: -3662899354654702095
-    second: yellowNinja - attack_9
-  - first:
-      213: 3656528083181497312
-    second: yellowNinja - attack_10
-  - first:
-      213: -4151532842496503352
-    second: yellowNinja - attack_11
-  - first:
-      213: -1272795299234129339
-    second: yellowNinja - attack_12
-  - first:
-      213: -1597032284425408420
-    second: yellowNinja - attack_13
-  - first:
-      213: -1286453775482830377
-    second: yellowNinja - attack_14
-  - first:
-      213: 5908979291313137607
-    second: yellowNinja - attack_15
-  - first:
-      213: -8765397996661390644
-    second: yellowNinja - attack_16
-  - first:
-      213: 2837599787924024480
-    second: yellowNinja - attack_17
-  - first:
-      213: 4357867798145374320
-    second: yellowNinja - attack_18
-  - first:
-      213: -1312310550153676653
-    second: yellowNinja - attack_19
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -94,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -108,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -173,20 +113,20 @@ TextureImporter:
       name: yellowNinja - attack_0
       rect:
         serializedVersion: 2
-        x: 47
-        y: 31
-        width: 27
-        height: 37
+        x: 0
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 2c908400a3c79daf0800000000000000
-      internalID: -371128905726686782
+      spriteID: 175449da038a4be469637074433805f8
+      internalID: 99997959
       vertices: []
       indices: 
       edges: []
@@ -195,20 +135,20 @@ TextureImporter:
       name: yellowNinja - attack_1
       rect:
         serializedVersion: 2
-        x: 175
-        y: 31
-        width: 27
-        height: 37
+        x: 128
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 1df3e4a0a7f85d990800000000000000
-      internalID: -7361820261545525295
+      spriteID: b56e7372054d802419d7943828a9979f
+      internalID: -1856544408
       vertices: []
       indices: 
       edges: []
@@ -217,20 +157,20 @@ TextureImporter:
       name: yellowNinja - attack_2
       rect:
         serializedVersion: 2
-        x: 307
-        y: 31
-        width: 23
-        height: 37
+        x: 256
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c676931e5085eeb80800000000000000
-      internalID: -8363650675703715988
+      spriteID: 1464d0a5a7c24fa439150e4eb0c1f1be
+      internalID: 757589107
       vertices: []
       indices: 
       edges: []
@@ -239,20 +179,20 @@ TextureImporter:
       name: yellowNinja - attack_3
       rect:
         serializedVersion: 2
-        x: 434
-        y: 31
-        width: 24
-        height: 49
+        x: 384
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a49c0fca4c7fedef0800000000000000
-      internalID: -81355319158978230
+      spriteID: 110445a80cd8e5e4d89b44c7ba70bd51
+      internalID: 778678991
       vertices: []
       indices: 
       edges: []
@@ -261,20 +201,20 @@ TextureImporter:
       name: yellowNinja - attack_4
       rect:
         serializedVersion: 2
-        x: 547
-        y: 31
-        width: 38
-        height: 50
+        x: 512
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 32640448f8b2fdd20800000000000000
-      internalID: 3305408546912355875
+      spriteID: 317a9f5924e93ad42bcc6bc963a51e3d
+      internalID: 1679990033
       vertices: []
       indices: 
       edges: []
@@ -283,20 +223,20 @@ TextureImporter:
       name: yellowNinja - attack_5
       rect:
         serializedVersion: 2
-        x: 653
-        y: 31
-        width: 60
-        height: 37
+        x: 640
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e5fe680dceb142e50800000000000000
-      internalID: 6783577642651545438
+      spriteID: 06b21b6a4d4ba874e853b86203cd44df
+      internalID: 866650898
       vertices: []
       indices: 
       edges: []
@@ -305,20 +245,20 @@ TextureImporter:
       name: yellowNinja - attack_6
       rect:
         serializedVersion: 2
-        x: 791
-        y: 31
-        width: 50
-        height: 37
+        x: 768
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 586c0f95aa50f61d0800000000000000
-      internalID: -3355456968156199291
+      spriteID: 79a9ae9d66457074c9537b3871a59f50
+      internalID: -785078298
       vertices: []
       indices: 
       edges: []
@@ -327,20 +267,20 @@ TextureImporter:
       name: yellowNinja - attack_7
       rect:
         serializedVersion: 2
-        x: 948
-        y: 31
-        width: 71
-        height: 36
+        x: 896
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e29d133780fa8a480800000000000000
-      internalID: -8887661413788427986
+      spriteID: 38e52aefdbc5a6b42beae4aebb8f59b5
+      internalID: 245612891
       vertices: []
       indices: 
       edges: []
@@ -349,20 +289,20 @@ TextureImporter:
       name: yellowNinja - attack_8
       rect:
         serializedVersion: 2
-        x: 1076
-        y: 31
-        width: 72
-        height: 36
+        x: 1024
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: cda3af586bed699a0800000000000000
-      internalID: -6226544559279949092
+      spriteID: dbead9a4d88b1724ca8d7e4490399e10
+      internalID: -481963775
       vertices: []
       indices: 
       edges: []
@@ -371,20 +311,20 @@ TextureImporter:
       name: yellowNinja - attack_9
       rect:
         serializedVersion: 2
-        x: 1204
-        y: 31
-        width: 72
-        height: 36
+        x: 1152
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 1f58ccd9174ca2dc0800000000000000
-      internalID: -3662899354654702095
+      spriteID: c6e0b1555ebe2be43a25f30b3e6cd45c
+      internalID: -1862283443
       vertices: []
       indices: 
       edges: []
@@ -393,20 +333,20 @@ TextureImporter:
       name: yellowNinja - attack_10
       rect:
         serializedVersion: 2
-        x: 1332
-        y: 31
-        width: 67
-        height: 37
+        x: 1280
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 0ebe5452be89eb230800000000000000
-      internalID: 3656528083181497312
+      spriteID: eb7bd281b17fdf24cac117eef73a0a2a
+      internalID: -2140890930
       vertices: []
       indices: 
       edges: []
@@ -415,20 +355,20 @@ TextureImporter:
       name: yellowNinja - attack_11
       rect:
         serializedVersion: 2
-        x: 1460
-        y: 31
-        width: 43
-        height: 37
+        x: 1408
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 8c1d0a120eac266c0800000000000000
-      internalID: -4151532842496503352
+      spriteID: 5aee597631afe604e813a59c309cbbe2
+      internalID: -2021320713
       vertices: []
       indices: 
       edges: []
@@ -437,20 +377,20 @@ TextureImporter:
       name: yellowNinja - attack_12
       rect:
         serializedVersion: 2
-        x: 1581
-        y: 31
-        width: 29
-        height: 37
+        x: 1536
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 54adc5d3b6f165ee0800000000000000
-      internalID: -1272795299234129339
+      spriteID: bc74b8fa934786a4a8ff42efa4eec699
+      internalID: 896509230
       vertices: []
       indices: 
       edges: []
@@ -459,20 +399,20 @@ TextureImporter:
       name: yellowNinja - attack_13
       rect:
         serializedVersion: 2
-        x: 1699
-        y: 31
-        width: 38
-        height: 37
+        x: 1664
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c503ef7499336d9e0800000000000000
-      internalID: -1597032284425408420
+      spriteID: 45cb75fcdfc3f20418afc0df2aa57f62
+      internalID: -1861312586
       vertices: []
       indices: 
       edges: []
@@ -481,20 +421,20 @@ TextureImporter:
       name: yellowNinja - attack_14
       rect:
         serializedVersion: 2
-        x: 1825
-        y: 31
-        width: 40
-        height: 37
+        x: 1792
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 7d1c26c6b19952ee0800000000000000
-      internalID: -1286453775482830377
+      spriteID: da3390ef4c6f50c46b3756d6405f0c65
+      internalID: 278174089
       vertices: []
       indices: 
       edges: []
@@ -503,20 +443,20 @@ TextureImporter:
       name: yellowNinja - attack_15
       rect:
         serializedVersion: 2
-        x: 1952
-        y: 31
-        width: 41
-        height: 37
+        x: 1920
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 7c7ebdbbb59e00250800000000000000
-      internalID: 5908979291313137607
+      spriteID: f099b571b1ab3dd4da81d1be729cb4c4
+      internalID: 1621220996
       vertices: []
       indices: 
       edges: []
@@ -525,20 +465,20 @@ TextureImporter:
       name: yellowNinja - attack_16
       rect:
         serializedVersion: 2
-        x: 2083
-        y: 31
-        width: 39
-        height: 37
+        x: 2048
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: cc2c31e86fc0b5680800000000000000
-      internalID: -8765397996661390644
+      spriteID: 544e8cc943e285c4d8b846dc66987320
+      internalID: -765040289
       vertices: []
       indices: 
       edges: []
@@ -547,20 +487,20 @@ TextureImporter:
       name: yellowNinja - attack_17
       rect:
         serializedVersion: 2
-        x: 2220
-        y: 31
-        width: 30
-        height: 37
+        x: 2176
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 0ac6fed09fd216720800000000000000
-      internalID: 2837599787924024480
+      spriteID: 51169f05b2f3ce840ba65bd131447e13
+      internalID: 695539524
       vertices: []
       indices: 
       edges: []
@@ -569,20 +509,20 @@ TextureImporter:
       name: yellowNinja - attack_18
       rect:
         serializedVersion: 2
-        x: 2352
-        y: 31
-        width: 26
-        height: 37
+        x: 2304
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 07891966ca14a7c30800000000000000
-      internalID: 4357867798145374320
+      spriteID: c08d754f990a4e04d9ad2acbb6e472bf
+      internalID: 1714562941
       vertices: []
       indices: 
       edges: []
@@ -591,20 +531,20 @@ TextureImporter:
       name: yellowNinja - attack_19
       rect:
         serializedVersion: 2
-        x: 2479
-        y: 31
-        width: 27
-        height: 37
+        x: 2432
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 398b71fe18cb9cde0800000000000000
-      internalID: -1312310550153676653
+      spriteID: 888abd50af959d24f80ca5a71f697162
+      internalID: 766577467
       vertices: []
       indices: 
       edges: []
@@ -613,7 +553,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 71a332a9924de0d40a9d1e118903bfd9
     internalID: 0
     vertices: []
     indices: 
@@ -621,28 +561,30 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":20.0,"y":1.0},"gridSpriteSize":{"x":128.0,"y":128.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      yellowNinja - attack_0: -371128905726686782
-      yellowNinja - attack_1: -7361820261545525295
-      yellowNinja - attack_10: 3656528083181497312
-      yellowNinja - attack_11: -4151532842496503352
-      yellowNinja - attack_12: -1272795299234129339
-      yellowNinja - attack_13: -1597032284425408420
-      yellowNinja - attack_14: -1286453775482830377
-      yellowNinja - attack_15: 5908979291313137607
-      yellowNinja - attack_16: -8765397996661390644
-      yellowNinja - attack_17: 2837599787924024480
-      yellowNinja - attack_18: 4357867798145374320
-      yellowNinja - attack_19: -1312310550153676653
-      yellowNinja - attack_2: -8363650675703715988
-      yellowNinja - attack_3: -81355319158978230
-      yellowNinja - attack_4: 3305408546912355875
-      yellowNinja - attack_5: 6783577642651545438
-      yellowNinja - attack_6: -3355456968156199291
-      yellowNinja - attack_7: -8887661413788427986
-      yellowNinja - attack_8: -6226544559279949092
-      yellowNinja - attack_9: -3662899354654702095
+      yellowNinja - attack_0: 99997959
+      yellowNinja - attack_1: -1856544408
+      yellowNinja - attack_10: -2140890930
+      yellowNinja - attack_11: -2021320713
+      yellowNinja - attack_12: 896509230
+      yellowNinja - attack_13: -1861312586
+      yellowNinja - attack_14: 278174089
+      yellowNinja - attack_15: 1621220996
+      yellowNinja - attack_16: -765040289
+      yellowNinja - attack_17: 695539524
+      yellowNinja - attack_18: 1714562941
+      yellowNinja - attack_19: 766577467
+      yellowNinja - attack_2: 757589107
+      yellowNinja - attack_3: 778678991
+      yellowNinja - attack_4: 1679990033
+      yellowNinja - attack_5: 866650898
+      yellowNinja - attack_6: -785078298
+      yellowNinja - attack_7: 245612891
+      yellowNinja - attack_8: -481963775
+      yellowNinja - attack_9: -1862283443
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
