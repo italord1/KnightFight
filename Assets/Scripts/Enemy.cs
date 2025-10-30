@@ -10,6 +10,12 @@ public class Enemy : MonoBehaviour
     public LayerMask whatIsGround;
 
     private bool facingLeft;
+
+    public float attackRangeRadious = 6f;
+    public LayerMask whatIsPlayer;
+    public Transform player;
+    public float chaseSpeed = 2f;
+    public float retriveDistance =3f;
     void Start()
     {
         facingLeft = true;
@@ -18,32 +24,61 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector2.left *Time.deltaTime * walkSpeed);
 
-      RaycastHit2D hitInfo =  Physics2D.Raycast(groundCheckPoint.position, Vector2.down, distance, whatIsGround);
+       Collider2D collInfo = Physics2D.OverlapCircle(transform.position, attackRangeRadious, whatIsPlayer);
 
-        if (hitInfo == false)
+        if (collInfo == true)
         {
-            if (facingLeft)
+            Vector2 targetPos = new Vector2(player.position.x, transform.position.y);
+
+            if (Vector2.Distance(transform.position, targetPos) > retriveDistance)
             {
-                transform.eulerAngles = new Vector3(0f, -180f, 0f);
-                facingLeft=false;
+                transform.position = Vector2.MoveTowards(transform.position, targetPos, chaseSpeed * Time.deltaTime);
             }
             else
             {
-                transform.eulerAngles = new Vector3(0f, 0f, 0f);
-                facingLeft=true;
+
+            }
+
+
+            
+        }
+        else
+        {
+            transform.Translate(Vector2.left * Time.deltaTime * walkSpeed);
+
+            RaycastHit2D hitInfo = Physics2D.Raycast(groundCheckPoint.position, Vector2.down, distance, whatIsGround);
+
+            if (hitInfo == false)
+            {
+                if (facingLeft)
+                {
+                    transform.eulerAngles = new Vector3(0f, -180f, 0f);
+                    facingLeft = false;
+                }
+                else
+                {
+                    transform.eulerAngles = new Vector3(0f, 0f, 0f);
+                    facingLeft = true;
+                }
             }
         }
+
+ 
     }
 
     private void OnDrawGizmosSelected()
     {
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position,attackRangeRadious);
+
         if (groundCheckPoint == null)
         {
             return;
         }
         Gizmos.color = Color.yellow;    
         Gizmos.DrawRay(groundCheckPoint.position, Vector2.down * distance);
+
+
     }
 }
