@@ -22,6 +22,10 @@ public class Enemy : MonoBehaviour
 
     private Rigidbody2D rb;
     private BoxCollider2D boxCollider2D;
+
+    private bool hasShaken = false;
+
+
     void Start()
     {
         facingLeft = true;
@@ -35,7 +39,9 @@ public class Enemy : MonoBehaviour
     {
         if(maxHealth <= 0)
         {
+            
             Die();
+                
             return;
         }
 
@@ -103,6 +109,7 @@ public class Enemy : MonoBehaviour
         }
         maxHealth -= damageAmount;
         animator.SetTrigger("hit");
+        CameraShake.instance.Shake(2.5f, .15f);
     }
 
     private void OnDrawGizmosSelected()
@@ -128,11 +135,21 @@ public class Enemy : MonoBehaviour
             Destroy(other.gameObject);
         }
     }
+
+    public void ShakeCamera()
+    {
+        CameraShake.instance.Shake(4f, .18f);
+    }
     void Die()
     {
         animator.SetBool("Death",true);
         rb.gravityScale = 0f;
         boxCollider2D.enabled= false;
+        if (!hasShaken)
+        {
+            hasShaken = true;
+            FindAnyObjectByType<CameraShake>().Shake(2f, .12f);
+        }
         Destroy(this.gameObject, 5f);
     }
 }
