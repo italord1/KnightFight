@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    public int maxHealth = 3;
 
     public float walkSpeed = 1.5f;
 
@@ -18,15 +19,25 @@ public class Enemy : MonoBehaviour
     public float retriveDistance =3f;
 
     private Animator animator;
+
+    private Rigidbody2D rb;
+    private BoxCollider2D boxCollider2D;
     void Start()
     {
         facingLeft = true;
         animator = this.gameObject.GetComponent<Animator>();
+        rb = this.gameObject.GetComponent<Rigidbody2D>();
+        boxCollider2D = this.gameObject.GetComponent<BoxCollider2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(maxHealth <= 0)
+        {
+            Die();
+            return;
+        }
 
        Collider2D collInfo = Physics2D.OverlapCircle(transform.position, attackRangeRadious, whatIsPlayer);
 
@@ -84,6 +95,16 @@ public class Enemy : MonoBehaviour
  
     }
 
+    public void TakeDamage(int damageAmount)
+    {
+        if (maxHealth <= 0)
+        {
+            return;
+        }
+        maxHealth -= damageAmount;
+        animator.SetTrigger("hit");
+    }
+
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.green;
@@ -97,5 +118,21 @@ public class Enemy : MonoBehaviour
         Gizmos.DrawRay(groundCheckPoint.position, Vector2.down * distance);
 
 
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.gameObject.tag == "Arrow")
+        {
+            TakeDamage(1);
+            Destroy(other.gameObject);
+        }
+    }
+    void Die()
+    {
+        animator.SetBool("Death",true);
+        rb.gravityScale = 0f;
+        boxCollider2D.enabled= false;
+        Destroy(this.gameObject, 5f);
     }
 }
