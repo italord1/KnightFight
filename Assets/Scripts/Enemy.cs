@@ -43,6 +43,10 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(player == null)
+        {
+            animator.SetBool("Attack", false);
+        }
         if(maxHealth <= 0)
         {
             

@@ -24,6 +24,10 @@ public class Player : MonoBehaviour
 
     public int maxHealth = 5;
 
+    public GameObject explosionPrefab;
+    public Transform explosionSpawnPoint;
+
+
     void Start()
     {
         isGround = true;
@@ -160,5 +164,10 @@ public class Player : MonoBehaviour
     public void Die()
     {
         Debug.Log("player died!!");
+        Instantiate(explosionPrefab,explosionSpawnPoint.position, Quaternion.identity);
+       
+        Destroy(this.gameObject);   
     }
+
+  
 }
