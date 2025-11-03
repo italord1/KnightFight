@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public static Player Instance;
+
     public float moveSpeed = 5f;
     private float movement;
     public Rigidbody2D rb;
@@ -20,16 +22,32 @@ public class Player : MonoBehaviour
     public Transform spawnPosition;
     public float arrowSpeed = 7f;
 
+    public int maxHealth = 5;
+
     void Start()
     {
         isGround = true;
         facingRight = true;
         animator = this.gameObject.GetComponent<Animator>();
+
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(this);
+        }
     }
 
    
     void Update()
     {
+
+        if (maxHealth <= 0)
+        {
+            Die();
+        }
        movement = Input.GetAxis("Horizontal");
 
        if(Input.GetKeyDown(KeyCode.Space))
@@ -107,13 +125,27 @@ public class Player : MonoBehaviour
       
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void TakeDamage(int damageAmount)
     {
-        if(collision.gameObject.tag == "Ground")
+        if (maxHealth <= 0)
         {
-            animator.SetBool("Jump", false);
+            return;
+        }
+        else
+        {
+            maxHealth -= damageAmount;
+            animator.SetTrigger("Hurt");
+            CameraShake.instance.Shake(2f, .12f);
         }
     }
+
+       private void OnCollisionEnter2D(Collision2D collision)
+        {
+                if (collision.gameObject.tag == "Ground")
+                {
+                    animator.SetBool("Jump", false);
+                }
+            }
 
     private void OnDrawGizmosSelected()
     {
@@ -123,5 +155,10 @@ public class Player : MonoBehaviour
         }
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(groudCheckPoint.position,groundCheckRadious);
+    }
+
+    public void Die()
+    {
+        Debug.Log("player died!!");
     }
 }

@@ -28,6 +28,9 @@ public class Enemy : MonoBehaviour
     public GameObject floatingTextPrefab;
     public Transform textSpawnPoint;
 
+    public Transform attackPoint;
+    public float attackRadius = 1.5f;
+
 
     void Start()
     {
@@ -104,6 +107,19 @@ public class Enemy : MonoBehaviour
  
     }
 
+    public void Attack()
+    {
+        Collider2D collInfo = Physics2D.OverlapCircle(attackPoint.position, attackRadius, whatIsPlayer);
+        if(collInfo)
+        {
+            if(collInfo.gameObject.GetComponent<Player>() != null)
+            {
+                Player.Instance.TakeDamage(1);
+            }
+        }
+
+    }
+
     public void TakeDamage(int damageAmount)
     {
         if (maxHealth <= 0)
@@ -121,6 +137,9 @@ public class Enemy : MonoBehaviour
     {
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position,attackRangeRadious);
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(attackPoint.position, attackRadius);
 
         if (groundCheckPoint == null)
         {
