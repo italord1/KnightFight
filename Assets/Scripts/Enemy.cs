@@ -25,6 +25,9 @@ public class Enemy : MonoBehaviour
 
     private bool hasShaken = false;
 
+    public GameObject floatingTextPrefab;
+    public Transform textSpawnPoint;
+
 
     void Start()
     {
@@ -110,6 +113,8 @@ public class Enemy : MonoBehaviour
         maxHealth -= damageAmount;
         animator.SetTrigger("hit");
         CameraShake.instance.Shake(2.5f, .15f);
+
+        Instantiate(floatingTextPrefab, textSpawnPoint.position, Quaternion.identity);
     }
 
     private void OnDrawGizmosSelected()
