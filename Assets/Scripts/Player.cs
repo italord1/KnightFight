@@ -28,6 +28,7 @@ public class Player : MonoBehaviour
     public Transform explosionSpawnPoint;
 
 
+
     void Start()
     {
         isGround = true;
@@ -125,6 +126,7 @@ public class Player : MonoBehaviour
             isGround = false;
             animator.SetBool("Jump", true);
         }
+        
      
       
     }

@@ -8,6 +8,7 @@ TagManager:
   - Arrow
   - Enemy
   - EnemyArrow
+  - Diamond
   layers:
   - Default
   - TransparentFX
