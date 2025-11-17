@@ -43,7 +43,7 @@ public class SkeletonEnemy : MonoBehaviour
     {
         if (player == null)
         {
-            animator.SetFloat("Run", 0f);
+            animator.SetFloat("Walk", 0f);
             animator.SetBool("Attack", false);
             return;
         }
@@ -112,7 +112,7 @@ public class SkeletonEnemy : MonoBehaviour
 
     void AttackPlayer()
     {
-        animator.SetFloat("Run", 0f);
+        animator.SetFloat("Walk", 0f);
         animator.SetBool("Attack", true);
        
     }
