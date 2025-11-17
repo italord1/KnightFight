@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -29,6 +30,9 @@ public class Player : MonoBehaviour
 
     private int currentDiamonds;
     public GameObject collectEffectPredab;
+
+    public Text currentDiamond_Text;
+    public Text currentHeart_Text;
 
 
 
@@ -146,6 +150,7 @@ public class Player : MonoBehaviour
             maxHealth -= damageAmount;
             animator.SetTrigger("Hurt");
             CameraShake.instance.Shake(2f, .12f);
+            currentHeart_Text.text = maxHealth.ToString();
         }
     }
 
@@ -162,6 +167,7 @@ public class Player : MonoBehaviour
         if(coll.gameObject.tag == "Diamond")
         {
             currentDiamonds++;
+            currentDiamond_Text.text= currentDiamonds.ToString();
            GameObject tempCollect_Effect =  Instantiate(collectEffectPredab, coll.gameObject.transform.position, Quaternion.identity);
             Destroy(tempCollect_Effect, .401f);
             Destroy(coll.gameObject);
@@ -170,6 +176,7 @@ public class Player : MonoBehaviour
         if(coll.gameObject.tag =="Heart")
         {
             maxHealth++;
+            currentHeart_Text.text = maxHealth.ToString();
             GameObject tempCollect_Effect = Instantiate(collectEffectPredab, coll.gameObject.transform.position, Quaternion.identity);
             Destroy(tempCollect_Effect, .401f);
             Destroy(coll.gameObject);
