@@ -27,6 +27,9 @@ public class Player : MonoBehaviour
     public GameObject explosionPrefab;
     public Transform explosionSpawnPoint;
 
+    private int currentDiamonds;
+    public GameObject collectEffectPredab;
+
 
 
     void Start()
@@ -43,6 +46,7 @@ public class Player : MonoBehaviour
         {
             Destroy(this);
         }
+        currentDiamonds = 0;
     }
 
    
@@ -151,7 +155,18 @@ public class Player : MonoBehaviour
                 {
                     animator.SetBool("Jump", false);
                 }
-            }
+        }
+
+    private void OnTriggerEnter2D(Collider2D coll)
+    {
+        if(coll.gameObject.tag == "Diamond")
+        {
+            currentDiamonds++;
+           GameObject tempCollect_Effect =  Instantiate(collectEffectPredab, coll.gameObject.transform.position, Quaternion.identity);
+            Destroy(tempCollect_Effect, .401f);
+            Destroy(coll.gameObject);
+        }
+    }
 
     private void OnDrawGizmosSelected()
     {

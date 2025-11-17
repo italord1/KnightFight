@@ -70,6 +70,9 @@ TagManager:
   - name: Arrow
     uniqueID: 3973172245
     locked: 0
+  - name: CollectEffect
+    uniqueID: 2730514661
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

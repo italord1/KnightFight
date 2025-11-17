@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 6171499959984120752}
   m_Layer: 8
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -115,7 +115,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1916960431
-  m_SortingLayer: -5
+  m_SortingLayer: -6
   m_SortingOrder: 0
   m_Sprite: {fileID: 8044143622087905872, guid: c659df2b888b6c3489af02c625e42db2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -247,6 +247,9 @@ MonoBehaviour:
   spawnPosition: {fileID: 6709545646652877864}
   arrowSpeed: 7
   maxHealth: 5
+  explosionPrefab: {fileID: 488705074710110644, guid: 848b3c0eeee51274aa7607fee5b5e909, type: 3}
+  explosionSpawnPoint: {fileID: 6027994580754078146}
+  collectEffectPredab: {fileID: 0}
 --- !u!1 &5401153812616589935
 GameObject:
   m_ObjectHideFlags: 0
