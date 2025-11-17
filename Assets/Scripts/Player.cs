@@ -166,6 +166,15 @@ public class Player : MonoBehaviour
             Destroy(tempCollect_Effect, .401f);
             Destroy(coll.gameObject);
         }
+
+        if(coll.gameObject.tag =="Heart")
+        {
+            maxHealth++;
+            GameObject tempCollect_Effect = Instantiate(collectEffectPredab, coll.gameObject.transform.position, Quaternion.identity);
+            Destroy(tempCollect_Effect, .401f);
+            Destroy(coll.gameObject);
+
+        }
     }
 
     private void OnDrawGizmosSelected()
