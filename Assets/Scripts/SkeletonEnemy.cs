@@ -32,6 +32,9 @@ public class SkeletonEnemy : MonoBehaviour
     private enum EnemyState { Idle, Chase, Attack }
     private EnemyState currentState = EnemyState.Idle;
 
+    private float fallLimit = -300f;
+    private bool isDead = false;
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -48,7 +51,7 @@ public class SkeletonEnemy : MonoBehaviour
             return;
         }
 
-        if (maxHealth <= 0)
+        if (maxHealth <= 0 || transform.position.y < fallLimit)
         {
             Die();
             return;
@@ -142,6 +145,8 @@ public class SkeletonEnemy : MonoBehaviour
 
     void Die()
     {
+        if (isDead) return;
+        isDead = true;
         animator.SetBool("Death", true);
         rb.gravityScale = 0f;
         boxCollider2D.enabled = false;
@@ -153,6 +158,8 @@ public class SkeletonEnemy : MonoBehaviour
         }
 
         Destroy(gameObject, 5f);
+        GameManager.Instance.EnemyKilled();
+
     }
 
     // ---------------- DEBUG ----------------

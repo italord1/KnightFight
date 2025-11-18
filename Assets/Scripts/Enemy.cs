@@ -31,6 +31,9 @@ public class Enemy : MonoBehaviour
     public Transform attackPoint;
     public float attackRadius = 1.5f;
 
+    private float fallLimit = -300f;
+    private bool isDead = false;
+
 
     void Start()
     {
@@ -47,7 +50,7 @@ public class Enemy : MonoBehaviour
         {
             animator.SetBool("Attack", false);
         }
-        if(maxHealth <= 0)
+        if(maxHealth <= 0 || transform.position.y < fallLimit)
         {
             
             Die();
@@ -108,7 +111,9 @@ public class Enemy : MonoBehaviour
             }
         }
 
- 
+      
+
+
     }
 
     public void Attack()
@@ -170,6 +175,8 @@ public class Enemy : MonoBehaviour
     }
     void Die()
     {
+        if (isDead) return;
+        isDead = true;
         animator.SetBool("Death",true);
         rb.gravityScale = 0f;
         boxCollider2D.enabled= false;
@@ -179,5 +186,7 @@ public class Enemy : MonoBehaviour
             FindAnyObjectByType<CameraShake>().Shake(2f, .12f);
         }
         Destroy(this.gameObject, 5f);
+        GameManager.Instance.EnemyKilled();
+
     }
 }

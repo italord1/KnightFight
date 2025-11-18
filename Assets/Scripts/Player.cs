@@ -34,6 +34,8 @@ public class Player : MonoBehaviour
     public Text currentDiamond_Text;
     public Text currentHeart_Text;
 
+    private float fallLimit = -12f;
+
 
 
     void Start()
@@ -82,6 +84,11 @@ public class Player : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             animator.SetTrigger("Fire");
+        }
+
+        if (transform.position.y < fallLimit)
+        {
+            GameManager.Instance.ShowGameOver();
         }
     }
 
@@ -171,6 +178,7 @@ public class Player : MonoBehaviour
            GameObject tempCollect_Effect =  Instantiate(collectEffectPredab, coll.gameObject.transform.position, Quaternion.identity);
             Destroy(tempCollect_Effect, .401f);
             Destroy(coll.gameObject);
+            GameManager.Instance.DiamondCollected();
         }
 
         if(coll.gameObject.tag =="Heart")
@@ -199,7 +207,9 @@ public class Player : MonoBehaviour
         Debug.Log("player died!!");
         Instantiate(explosionPrefab,explosionSpawnPoint.position, Quaternion.identity);
        
-        Destroy(this.gameObject);   
+        Destroy(this.gameObject);
+
+        GameManager.Instance.ShowGameOver();
     }
 
   
