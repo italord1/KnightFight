@@ -35,6 +35,7 @@ public class Player : MonoBehaviour
     public Text currentHeart_Text;
 
     private float fallLimit = -12f;
+    private bool isDead = false;
 
 
 
@@ -59,7 +60,7 @@ public class Player : MonoBehaviour
     void Update()
     {
 
-        if (maxHealth <= 0)
+        if (!isDead && (maxHealth <= 0 || transform.position.y < fallLimit))
         {
             Die();
         }
@@ -86,10 +87,7 @@ public class Player : MonoBehaviour
             animator.SetTrigger("Fire");
         }
 
-        if (transform.position.y < fallLimit)
-        {
-            GameManager.Instance.ShowGameOver();
-        }
+     
     }
 
     private void FixedUpdate()
@@ -204,10 +202,14 @@ public class Player : MonoBehaviour
 
     public void Die()
     {
+
+        if (isDead) return;
+        isDead = true;
         Debug.Log("player died!!");
         Instantiate(explosionPrefab,explosionSpawnPoint.position, Quaternion.identity);
        
         Destroy(this.gameObject);
+
 
         GameManager.Instance.ShowGameOver();
     }
